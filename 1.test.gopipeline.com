@@ -1,5 +1,5 @@
 pipelines:
-  pipe1:
+  test:
     group: simple
 
     materials:
