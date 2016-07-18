@@ -1,15 +1,14 @@
-pipelines:
-  pipe1:
-    group: simple
+pipe1:
+  group: simple
+ 
+  materials:
+    mygit:
+      git: https://github.com/kmugrage/yaml-gocd-test
     
-    materials:
-      mygit:
-        git: https://github.com/kmugrage/yaml-gocd-test
-      
-    stages:
-      - build:
-          jobs:
-            build:
-              tasks:
-                - exec:
-                  command: echo
+  stages:
+    - build:
+        jobs:
+          build:
+            tasks:
+              - exec:
+                command: echo
