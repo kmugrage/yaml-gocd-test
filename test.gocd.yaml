@@ -35,9 +35,15 @@ pipelines:
         stage: package
 
     stages:
-      - build:
+      - DeployApplications:
           jobs:
-            build:
+            deploy:
               tasks:
                 - exec:
-                    command: echo 
+                    command: echo
+      - FunctionalTests:
+          jobs:
+            runTests:
+              tasks:
+                - exec:
+                    command: echo
