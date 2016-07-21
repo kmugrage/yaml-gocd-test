@@ -13,3 +13,19 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
+
+      - unit_test:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: echo
+
+      - package:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: echo
+
+
