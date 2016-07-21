@@ -25,20 +25,3 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
-
-  Functional_Testing:
-    group: Development
-
-      materials:
-        upstream:
-          pipeline: Application
-          stage: package
-
-      stages:
-        - install_packages:
-            jobs:
-              build:
-                tasks:
-                - exec:
-                    command: echo
-                    
