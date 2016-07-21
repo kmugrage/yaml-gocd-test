@@ -1,6 +1,6 @@
 pipelines:
-  test:
-    group: simple
+  Application:
+    group: Development
 
     materials:
       mygit:
@@ -13,14 +13,12 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
-
       - unit_test:
           jobs:
             build:
               tasks:
                 - exec:
                     command: echo
-
       - package:
           jobs:
             build:
@@ -28,4 +26,19 @@ pipelines:
                 - exec:
                     command: echo
 
+  Functional_Testing:
+    group: Development
 
+      materials:
+        upstream:
+          pipeline: Application
+          stage: package
+
+      stages:
+        - install_packages:
+            jobs:
+              build:
+                tasks:
+                - exec:
+                    command: echo
+                    
