@@ -46,3 +46,20 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
+
+  UserAcceptance:
+    group: Development
+
+    materials:
+      services:
+        pipeline: Application
+        stage: package
+
+  stages:
+    - DeployApplications:
+        jobs:
+          deploy:
+            tasks:
+              - exec:
+                  command: echo
+                  
