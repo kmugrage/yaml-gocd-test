@@ -8,6 +8,8 @@ pipelines:
 
     stages:
       - build:
-          tasks:
-          - exec:
-            command: echo
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: echo
