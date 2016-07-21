@@ -55,11 +55,11 @@ pipelines:
         pipeline: Application
         stage: package
 
-  stages:
-    - DeployApplications:
-        jobs:
-          deploy:
-            tasks:
-              - exec:
-                  command: echo
-                  
+    stages:
+      - DeployApplications:
+          jobs:
+            deploy:
+              tasks:
+                - exec:
+                    command: echo
+
