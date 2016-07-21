@@ -4,11 +4,10 @@ pipelines:
 
     materials:
       mygit:
-        git: https://github.com/kmugrage/yaml-gocd-test
+        git: https://github.com/kmugrage/webinar-code.git
 
     stages:
       - build:
-        jobs:
           tasks:
           - exec:
             command: echo
