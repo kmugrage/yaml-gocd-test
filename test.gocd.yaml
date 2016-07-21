@@ -5,7 +5,7 @@ pipelines:
     materials:
       mygit:
         git: https://github.com/kmugrage/webinar-code.git
-     stages:
+    stages:
       - build:
           jobs:
             build:
