@@ -62,4 +62,12 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
+      - Approved:
+          approval:
+            type: manual
+          jobs:
+            approve:
+              tasks:
+                - exec:
+                    command: echo
 
