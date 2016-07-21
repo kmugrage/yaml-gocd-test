@@ -25,3 +25,19 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
+
+  FunctionalTesting:
+    group: Development
+
+    materials:
+      services:
+        pipeline: Application
+        stage: package
+
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: echo 
