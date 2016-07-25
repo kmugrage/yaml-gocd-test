@@ -4,7 +4,7 @@ pipelines:
 
     materials:
       uat: 
-        pipeline: FunctionalTesting
+        pipeline: UserAcceptance
         stage: Approved
 
     stages:
