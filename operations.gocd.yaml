@@ -14,3 +14,32 @@ pipelines:
               tasks:
                 - exec:
                     command: echo
+      - VerifyDeployment:
+          jobs:
+            verify:
+              tasks:
+                - exec:
+                    command: echo
+
+
+  Production:
+    group: Operations
+
+    materials:
+      uat: 
+        pipeline: Staging
+        stage: VerifyDeployment
+
+    stages:
+      - DeployApplications:
+          jobs:
+            deploy:
+              tasks:
+                - exec:
+                    command: echo
+      - VerifyDeployment:
+          jobs:
+            verify:
+              tasks:
+                - exec:
+                    command: echo
