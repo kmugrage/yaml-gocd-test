@@ -1,0 +1,16 @@
+pipelines:
+  Staging:
+    group: Operations
+
+    materials:
+      uat: 
+        pipeline: FunctionalTesting
+        stage: Approved
+
+    stages:
+      - DeployApplications:
+          jobs:
+            deploy:
+              tasks:
+                - exec:
+                    command: echo
