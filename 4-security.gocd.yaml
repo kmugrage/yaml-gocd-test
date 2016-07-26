@@ -1,0 +1,20 @@
+pipelines:
+  SecurityTests:
+    group: Operations
+
+    materials:
+      mygit:
+        git: /vagrant/2016-workshop-security
+      services:
+        pipeline: Application
+        stage: package
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+                - exec:
+                    command: rake
+                    arguments:
+                      - test_security
+                    
