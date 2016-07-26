@@ -1,6 +1,7 @@
 pipelines:
   SecurityTests:
     group: Operations
+    locking: on
 
     materials:
       SecurityGit:

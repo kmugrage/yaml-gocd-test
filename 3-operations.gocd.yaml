@@ -1,6 +1,7 @@
 pipelines:
   Staging:
     group: Operations
+    locking: on
 
     materials:
       uat: 
@@ -27,6 +28,7 @@ pipelines:
 
   Production:
     group: Operations
+    locking: on
 
     materials:
       uat: 
