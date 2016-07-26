@@ -38,7 +38,7 @@ pipelines:
                     command: echo
       - Approved:
           approval:
-            type: automatic
+            type: success
           jobs:
             approve:
               tasks:
