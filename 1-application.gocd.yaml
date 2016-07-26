@@ -10,21 +10,18 @@ pipelines:
           jobs:
             build:
               tasks:
-                - exec:
-                    command: rake
-                    arguments: build
+                - rake:
+                    target: build
       - unit_test:
           jobs:
             build:
               tasks:
-                - exec:
-                    command: rake
-                    arguments: unit_test
+                - rake:
+                    target: unit_test
       - package:
           jobs:
             build:
               tasks:
-                - exec:
-                    command: rake
-                    arguments: package
+                - rake:
+                    target: package
                     
