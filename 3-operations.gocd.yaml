@@ -32,6 +32,9 @@ pipelines:
       uat: 
         pipeline: Staging
         stage: VerifyDeployment
+      security:
+        pipeline: SecurityTests
+        stage: TestSecurity
 
     stages:
       - DeployApplications:

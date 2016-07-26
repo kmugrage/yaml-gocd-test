@@ -9,9 +9,9 @@ pipelines:
         pipeline: Application
         stage: package
     stages:
-      - build:
+      - TestSecurity:
           jobs:
-            build:
+            test_security:
               tasks:
                 - exec:
                     command: rake
