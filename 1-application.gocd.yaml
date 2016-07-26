@@ -3,7 +3,7 @@ pipelines:
     group: Development
 
     materials:
-      mygit:
+      AppGit:
         git: /vagrant/2016-workshop
     stages:
       - build:

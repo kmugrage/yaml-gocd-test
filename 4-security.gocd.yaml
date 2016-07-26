@@ -3,7 +3,7 @@ pipelines:
     group: Operations
 
     materials:
-      mygit:
+      SecurityGit:
         git: /vagrant/2016-workshop-security
       services:
         pipeline: Application
