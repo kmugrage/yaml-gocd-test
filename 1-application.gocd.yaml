@@ -1,7 +1,5 @@
 pipelines:
   Application:
-    environment_variables:
-      PATH: $PATH:~/.rbenv/bin
     group: Development
 
     materials:
