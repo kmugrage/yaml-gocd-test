@@ -4,7 +4,7 @@ pipelines:
 
     materials:
       mygit:
-        git: https://github.com/kmugrage/webinar-code.git
+        git: /vagrant/2016-workshop
     stages:
       - build:
           jobs:
