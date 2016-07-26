@@ -18,6 +18,7 @@ pipelines:
       - FunctionalTests:
           jobs:
             runTests:
+              runinstances: 3
               tasks:
                 - exec:
                     command: echo
