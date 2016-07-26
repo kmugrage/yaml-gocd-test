@@ -11,16 +11,17 @@ pipelines:
             build:
               tasks:
                 - exec:
-                    command: echo
+                    command: rake build
       - unit_test:
           jobs:
             build:
               tasks:
                 - exec:
-                    command: echo
+                    command: rake unit_test
       - package:
           jobs:
             build:
               tasks:
                 - exec:
-                    command: echo
+                    command: rake package
+                    
